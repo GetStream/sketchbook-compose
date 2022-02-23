@@ -1,0 +1,1 @@
+sourceset_dependencies='{":sketchbook:dokkaHtml/androidTestRelease":[],":sketchbook:dokkaHtml/debug":[],":sketchbook:dokkaHtml/main":[],":sketchbook:dokkaHtml/release":[],":sketchbook:dokkaHtml/testFixtures":[],":sketchbook:dokkaHtml/testFixturesDebug":[],":sketchbook:dokkaHtml/testFixturesRelease":[]}'

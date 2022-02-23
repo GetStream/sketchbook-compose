@@ -1,0 +1,45 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:io.getstream.sketchbook////PointingToDeclaration/sketchbook/io.getstream.sketchbook/index.html
+$dokka.location:io.getstream.sketchbook//ColorPickerDialog/#io.getstream.sketchbook.SketchbookController?#androidx.compose.runtime.MutableState[kotlin.Boolean]#androidx.compose.ui.graphics.Color#kotlin.String#androidx.compose.ui.graphics.Color?#kotlin.Function1[androidx.compose.ui.graphics.Color,kotlin.Unit]?/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-color-picker-dialog.html
+$dokka.location:io.getstream.sketchbook//ColorPickerPaletteIcon/#androidx.compose.ui.Modifier#io.getstream.sketchbook.SketchbookController#androidx.compose.ui.graphics.ImageBitmap/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-color-picker-palette-icon.html
+$dokka.location:io.getstream.sketchbook//PaintColorPalette/#androidx.compose.ui.Modifier#io.getstream.sketchbook.SketchbookController#kotlin.collections.List[androidx.compose.ui.graphics.Color]#io.getstream.sketchbook.PaintColorPaletteTheme#kotlin.Int#kotlin.Function2[kotlin.Int,androidx.compose.ui.graphics.Color,kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?#kotlin.Function2[kotlin.Int,androidx.compose.ui.graphics.Color,kotlin.Unit]?#kotlin.Function0[kotlin.Unit]?/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-paint-color-palette.html
+$dokka.location:io.getstream.sketchbook//Sketchbook/#androidx.compose.ui.Modifier#io.getstream.sketchbook.SketchbookController#androidx.compose.ui.graphics.Color#androidx.compose.ui.graphics.ImageBitmap?#kotlin.Function2[kotlin.Float,kotlin.Float,kotlin.Unit]?#kotlin.Function2[kotlin.Boolean,kotlin.Boolean,kotlin.Unit]?/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook.html
+$dokka.location:io.getstream.sketchbook//rememberSketchbookController/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/remember-sketchbook-controller.html
+$dokka.location:io.getstream.sketchbook/PaintColorPaletteTheme///PointingToDeclaration/sketchbook/io.getstream.sketchbook/-paint-color-palette-theme/index.html
+$dokka.location:io.getstream.sketchbook/PaintColorPaletteTheme/PaintColorPaletteTheme/#androidx.compose.ui.graphics.Shape#androidx.compose.ui.unit.Dp#androidx.compose.ui.unit.Dp#androidx.compose.ui.graphics.Color#androidx.compose.ui.unit.Dp/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-paint-color-palette-theme/-paint-color-palette-theme.html
+$dokka.location:io.getstream.sketchbook/PaintColorPaletteTheme/borderColor/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-paint-color-palette-theme/border-color.html
+$dokka.location:io.getstream.sketchbook/PaintColorPaletteTheme/borderWidth/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-paint-color-palette-theme/border-width.html
+$dokka.location:io.getstream.sketchbook/PaintColorPaletteTheme/itemSize/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-paint-color-palette-theme/item-size.html
+$dokka.location:io.getstream.sketchbook/PaintColorPaletteTheme/selectedItemSize/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-paint-color-palette-theme/selected-item-size.html
+$dokka.location:io.getstream.sketchbook/PaintColorPaletteTheme/shape/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-paint-color-palette-theme/shape.html
+$dokka.location:io.getstream.sketchbook/SketchbookController///PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/index.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/SketchbookController/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/-sketchbook-controller.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/canRedo/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/can-redo.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/canUndo/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/can-undo.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/clear/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/clear.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/clearImageBitmap/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/clear-image-bitmap.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/clearPaths/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/clear-paths.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/currentPaint/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/current-paint.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/currentPaintColor/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/current-paint-color.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/getSketchbookBitmap/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/get-sketchbook-bitmap.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/isEraseMode/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/is-erase-mode.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/redo/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/redo.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setBackgroundColor/#androidx.compose.ui.graphics.Color/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-background-color.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setEraseMode/#kotlin.Boolean/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-erase-mode.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setEraseRadius/#kotlin.Float/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-erase-radius.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setImageBitmap/#androidx.compose.ui.graphics.ImageBitmap?/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-image-bitmap.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setLinearShader/#kotlin.collections.List[androidx.compose.ui.graphics.Color]/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-linear-shader.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setPaint/#androidx.compose.ui.graphics.Paint/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-paint.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setPaintAlpha/#kotlin.Float/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-paint-alpha.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setPaintColor/#androidx.compose.ui.graphics.Color/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-paint-color.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setPaintShader/#android.graphics.Shader?/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-paint-shader.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setPaintStrokeWidth/#kotlin.Float/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-paint-stroke-width.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setPaintingStyle/#androidx.compose.ui.graphics.PaintingStyle/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-painting-style.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setPathEffect/#androidx.compose.ui.graphics.PathEffect?/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-path-effect.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setRainbowShader/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-rainbow-shader.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/setSelectedColorIndex/#kotlin.Int/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/set-selected-color-index.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/toggleEraseMode/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/toggle-erase-mode.html
+$dokka.location:io.getstream.sketchbook/SketchbookController/undo/#/PointingToDeclaration/sketchbook/io.getstream.sketchbook/-sketchbook-controller/undo.html
+io.getstream.sketchbook
+
