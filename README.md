@@ -8,7 +8,7 @@
 </p><br>
 
 <p align="center">
-🎨 Jetpack Compose canvas library that helps you to draw paths, images on canvas with color pickers and palettes. Sketchbooks also provide useful components and functions that can easily interact with canvas.
+🎨 Jetpack Compose canvas library that helps you to draw paths and images on canvas with color pickers and palettes. Sketchbook also provides useful components and functions that can easily interact with canvas.
 </p><br>
 
 ## Preview
