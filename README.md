@@ -8,7 +8,7 @@
 </p><br>
 
 <p align="center">
-🎨 Jetpack Compose canvas library that helps you to draw paths and images on canvas with color pickers and palettes. Sketchbook also provides useful components and functions that can easily interact with canvas.
+🎨 Jetpack Compose canvas library that helps you draw paths and images on canvas with color pickers and palettes. Sketchbook also provides useful components and functions that can easily interact with canvas.
 </p><br>
 
 ## Preview
@@ -17,6 +17,14 @@
 <img src="https://user-images.githubusercontent.com/24237865/154213763-47af36de-61b3-446e-9d6c-563bae87bfda.gif" width="32.3%"/>
 <img src="/preview/preview1.gif" width="32.3%"/>
 </p>
+
+<a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/></a>
+
+## Contribution 💙
+
+Sketchbook is maintained by __[Stream](https://getstream.io/)__.<br>
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat SDK for Android](https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook)__! <br>
+Also, anyone can contribute to improving code, docs, or something following our [Contributing Guideline](/CONTRIBUTING.md).
 
 ## Download
 [![Maven Central](https://img.shields.io/maven-central/v/io.getstream/sketchbook.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%sketchbook%22)
@@ -340,7 +348,7 @@ PaintColorPalette(
 )
 ```
 
- <a href="https://getstream.io/tutorials/android-chat/"><img src="https://user-images.githubusercontent.com/24237865/146505581-a79e8f7d-6eda-4611-b41a-d60f0189e7d4.jpeg" align="right" /></a>
+ <a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/146505581-a79e8f7d-6eda-4611-b41a-d60f0189e7d4.jpeg" align="right" /></a>
 
 ## Find this library useful? :heart:
 
