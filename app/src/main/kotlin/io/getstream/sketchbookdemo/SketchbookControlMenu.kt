@@ -47,7 +47,7 @@ import androidx.compose.ui.unit.dp
 import io.getstream.sketchbook.SketchbookController
 
 @Composable
-fun SketchbookControlItems(
+fun SketchbookControlMenu(
     controller: SketchbookController,
 ) {
     val context = LocalContext.current

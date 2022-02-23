@@ -73,7 +73,7 @@ fun MainScreen() {
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        SketchbookControlItems(controller = sketchbookController)
+        SketchbookControlMenu(controller = sketchbookController)
 
         Spacer(modifier = Modifier.height(20.dp))
     }
