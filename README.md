@@ -18,9 +18,9 @@
 <img src="/preview/preview1.gif" width="32.3%"/>
 </p>
 
-<a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/></a>
-
 ## Contribution 💙
+
+<a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/></a>
 
 Sketchbook is maintained by __[Stream](https://getstream.io/)__.
 If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat SDK for Android](https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook)__!
