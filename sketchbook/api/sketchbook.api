@@ -1,0 +1,72 @@
+public final class io/getstream/sketchbook/ColorPickerDialogKt {
+	public static final fun ColorPickerDialog-4oaEEMA (Lio/getstream/sketchbook/SketchbookController;Landroidx/compose/runtime/MutableState;JLjava/lang/String;Landroidx/compose/ui/graphics/Color;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/getstream/sketchbook/ColorPickerPaletteIconKt {
+	public static final fun ColorPickerPaletteIcon (Landroidx/compose/ui/Modifier;Lio/getstream/sketchbook/SketchbookController;Landroidx/compose/ui/graphics/ImageBitmap;Landroidx/compose/runtime/Composer;I)V
+}
+
+public final class io/getstream/sketchbook/PaintColorPaletteKt {
+	public static final fun PaintColorPalette (Landroidx/compose/ui/Modifier;Lio/getstream/sketchbook/SketchbookController;Ljava/util/List;Lio/getstream/sketchbook/PaintColorPaletteTheme;ILkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function4;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/getstream/sketchbook/PaintColorPaletteTheme {
+	public static final field $stable I
+	public synthetic fun <init> (Landroidx/compose/ui/graphics/Shape;FFJFILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Landroidx/compose/ui/graphics/Shape;FFJFLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Landroidx/compose/ui/graphics/Shape;
+	public final fun component2-D9Ej5fM ()F
+	public final fun component3-D9Ej5fM ()F
+	public final fun component4-0d7_KjU ()J
+	public final fun component5-D9Ej5fM ()F
+	public final fun copy-ckGxDs8 (Landroidx/compose/ui/graphics/Shape;FFJF)Lio/getstream/sketchbook/PaintColorPaletteTheme;
+	public static synthetic fun copy-ckGxDs8$default (Lio/getstream/sketchbook/PaintColorPaletteTheme;Landroidx/compose/ui/graphics/Shape;FFJFILjava/lang/Object;)Lio/getstream/sketchbook/PaintColorPaletteTheme;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBorderColor-0d7_KjU ()J
+	public final fun getBorderWidth-D9Ej5fM ()F
+	public final fun getItemSize-D9Ej5fM ()F
+	public final fun getSelectedItemSize-D9Ej5fM ()F
+	public final fun getShape ()Landroidx/compose/ui/graphics/Shape;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/getstream/sketchbook/SketchbookController {
+	public static final field $stable I
+	public fun <init> ()V
+	public final fun clear ()V
+	public final fun clearImageBitmap ()V
+	public final fun clearPaths ()V
+	public final fun getCanRedo ()Landroidx/compose/runtime/State;
+	public final fun getCanUndo ()Landroidx/compose/runtime/State;
+	public final fun getCurrentPaint ()Landroidx/compose/ui/graphics/Paint;
+	public final fun getCurrentPaintColor ()Landroidx/compose/runtime/State;
+	public final fun getSketchbookBitmap ()Landroidx/compose/ui/graphics/ImageBitmap;
+	public final fun isEraseMode ()Landroidx/compose/runtime/State;
+	public final fun redo ()V
+	public final fun setBackgroundColor-8_81llA (J)V
+	public final fun setEraseMode (Z)V
+	public final fun setEraseRadius (F)V
+	public final fun setImageBitmap (Landroidx/compose/ui/graphics/ImageBitmap;)V
+	public final fun setLinearShader (Ljava/util/List;)V
+	public final fun setPaint (Landroidx/compose/ui/graphics/Paint;)V
+	public final fun setPaintAlpha (F)V
+	public final fun setPaintColor-8_81llA (J)V
+	public final fun setPaintShader (Landroid/graphics/Shader;)V
+	public final fun setPaintStrokeWidth (F)V
+	public final fun setPaintingStyle-k9PVt8s (I)V
+	public final fun setPathEffect (Landroidx/compose/ui/graphics/PathEffect;)V
+	public final fun setRainbowShader ()V
+	public final fun setSelectedColorIndex (I)V
+	public final fun toggleEraseMode ()V
+	public final fun undo ()V
+}
+
+public final class io/getstream/sketchbook/SketchbookControllerKt {
+	public static final fun rememberSketchbookController (Landroidx/compose/runtime/Composer;I)Lio/getstream/sketchbook/SketchbookController;
+}
+
+public final class io/getstream/sketchbook/SketchbookKt {
+	public static final fun Sketchbook-FU0evQE (Landroidx/compose/ui/Modifier;Lio/getstream/sketchbook/SketchbookController;JLandroidx/compose/ui/graphics/ImageBitmap;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
