@@ -70,7 +70,7 @@ public fun ColorPickerDialog(
             ) {
                 ColorPickerDialogContent(
                     selectText = selectText,
-                    expanded = expanded,
+                    onExpandedChange = { expanded.value = it },
                     initialColor = initialColor,
                     onColorSelected = { selectedColor ->
                         controller?.setPaintColor(selectedColor)
@@ -84,7 +84,7 @@ public fun ColorPickerDialog(
 
 @Composable
 private fun ColorPickerDialogContent(
-    expanded: MutableState<Boolean>,
+    onExpandedChange: (Boolean) -> Unit,
     selectText: String,
     initialColor: Color?,
     onColorSelected: (Color) -> Unit
@@ -125,7 +125,7 @@ private fun ColorPickerDialogContent(
 
                 Button(onClick = {
                     onColorSelected.invoke(Color(selectedColor.color))
-                    expanded.value = false
+                    onExpandedChange.invoke(false)
                 }) {
                     Text(text = selectText)
                 }
