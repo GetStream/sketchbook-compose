@@ -1,4 +1,4 @@
-<a href="https://getstream.io/chat/compose/tutorial/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/155820258-1a80aaa3-2855-41a9-9cbe-bfde5483b7ca.png" /></a><br><br>
+<a href="https://getstream.io/chat/sdk/compose/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/155820258-1a80aaa3-2855-41a9-9cbe-bfde5483b7ca.png" /></a><br><br>
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
@@ -19,12 +19,12 @@
 <img src="/preview/preview1.gif" width="32.3%"/>
 </p>
 
-<a href="https://getstream.io/chat/compose/tutorial/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="13%"/></a>
+<a href="https://getstream.io/chat/sdk/compose/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="13%"/></a>
 
 ## Contribution 💙
 
 Sketchbook is maintained by __[Stream](https://getstream.io/)__.
-If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat SDK for Jetpack Compose](https://getstream.io/chat/compose/tutorial/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook)__!
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat SDK for Jetpack Compose](https://getstream.io/chat/sdk/compose/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook)__!
 Also, anyone can contribute to improving code, docs, or something following our [Contributing Guideline](/CONTRIBUTING.md).
 
 ## Download
@@ -349,7 +349,7 @@ PaintColorPalette(
 )
 ```
 
-<a href="https://getstream.io/chat/compose/tutorial/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/146505581-a79e8f7d-6eda-4611-b41a-d60f0189e7d4.jpeg" align="right" /></a>
+<a href="https://getstream.io/chat/sdk/compose/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/146505581-a79e8f7d-6eda-4611-b41a-d60f0189e7d4.jpeg" align="right" /></a>
 
 ## Find this library useful? :heart:
 
