@@ -24,7 +24,7 @@
 ## Contribution 💙
 
 Sketchbook is maintained by __[Stream](https://getstream.io/)__.
-If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat SDK for Android](https://getstream.io/chat/compose/tutorial/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook)__!
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat SDK for Jetpack Compose](https://getstream.io/chat/compose/tutorial/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook)__!
 Also, anyone can contribute to improving code, docs, or something following our [Contributing Guideline](/CONTRIBUTING.md).
 
 ## Download
