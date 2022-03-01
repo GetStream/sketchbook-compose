@@ -51,7 +51,7 @@ afterEvaluate {
                 pom {
                     name = PUBLISH_ARTIFACT_ID
                     description = 'Sketchbook lets you build drawings on canvas with color palettes for Jetpack Compose.'
-                    url = 'https://github.com/getstream/sketchbook'
+                    url = 'https://github.com/getstream/sketchbook-compose'
                     licenses {
                         license {
                             name = 'The Apache Software License, Version 2.0'
@@ -65,9 +65,9 @@ afterEvaluate {
                         }
                     }
                     scm {
-                        connection = 'scm:git:github.com/getstream/sketchbook.git'
-                        developerConnection = 'scm:git:ssh://github.com/getstream/sketchbook.git'
-                        url = 'https://github.com/getstream/sketchbook/tree/main'
+                        connection = 'scm:git:github.com/getstream/sketchbook-compose.git'
+                        developerConnection = 'scm:git:ssh://github.com/getstream/sketchbook-compose.git'
+                        url = 'https://github.com/getstream/sketchbook-compose/tree/main'
                     }
                 }
             }
