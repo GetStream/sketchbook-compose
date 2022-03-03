@@ -24,7 +24,6 @@ import android.graphics.PorterDuff
 import android.graphics.RectF
 import android.view.MotionEvent
 import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -107,132 +106,130 @@ public fun Sketchbook(
         }
     }
 
-    BoxWithConstraints(modifier = modifier) {
-        Canvas(
-            modifier = Modifier
-                .fillMaxSize()
-                .onSizeChanged { newSize ->
-                    val size =
-                        newSize.takeIf { it.width != 0 && it.height != 0 } ?: return@onSizeChanged
-                    controller.releaseBitmap()
-                    controller.pathBitmap =
-                        ImageBitmap(size.width, size.height, ImageBitmapConfig.Argb8888)
-                            .also {
-                                canvas = Canvas(it)
-                                controller.bitmapSize.value = size
-                            }
-                }
-                .pointerInteropFilter { event ->
-                    val motionTouchEventX = event.x
-                    val motionTouchEventY = event.y
+    Canvas(
+        modifier = modifier
+            .fillMaxSize()
+            .onSizeChanged { newSize ->
+                val size =
+                    newSize.takeIf { it.width != 0 && it.height != 0 } ?: return@onSizeChanged
+                controller.releaseBitmap()
+                controller.pathBitmap =
+                    ImageBitmap(size.width, size.height, ImageBitmapConfig.Argb8888)
+                        .also {
+                            canvas = Canvas(it)
+                            controller.bitmapSize.value = size
+                        }
+            }
+            .pointerInteropFilter { event ->
+                val motionTouchEventX = event.x
+                val motionTouchEventY = event.y
 
-                    when (event.action) {
-                        MotionEvent.ACTION_DOWN -> {
-                            path.reset()
-                            path.moveTo(motionTouchEventX, motionTouchEventY)
+                when (event.action) {
+                    MotionEvent.ACTION_DOWN -> {
+                        path.reset()
+                        path.moveTo(motionTouchEventX, motionTouchEventY)
+                        currentPoint.x = motionTouchEventX
+                        currentPoint.y = motionTouchEventY
+                    }
+                    MotionEvent.ACTION_MOVE -> {
+                        val dx = abs(motionTouchEventX - currentPoint.x)
+                        val dy = abs(motionTouchEventY - currentPoint.y)
+                        if (dx >= touchTolerance || dy >= touchTolerance) {
+                            // QuadTo() adds a quadratic bezier from the last point,
+                            // approaching control point (x1,y1), and ending at (x2,y2).
+                            path.quadraticBezierTo(
+                                currentPoint.x,
+                                currentPoint.y,
+                                (motionTouchEventX + currentPoint.x) / 2,
+                                (motionTouchEventY + currentPoint.y) / 2
+                            )
                             currentPoint.x = motionTouchEventX
                             currentPoint.y = motionTouchEventY
-                        }
-                        MotionEvent.ACTION_MOVE -> {
-                            val dx = abs(motionTouchEventX - currentPoint.x)
-                            val dy = abs(motionTouchEventY - currentPoint.y)
-                            if (dx >= touchTolerance || dy >= touchTolerance) {
-                                // QuadTo() adds a quadratic bezier from the last point,
-                                // approaching control point (x1,y1), and ending at (x2,y2).
-                                path.quadraticBezierTo(
-                                    currentPoint.x,
-                                    currentPoint.y,
-                                    (motionTouchEventX + currentPoint.x) / 2,
-                                    (motionTouchEventY + currentPoint.y) / 2
-                                )
-                                currentPoint.x = motionTouchEventX
-                                currentPoint.y = motionTouchEventY
 
-                                // Draw the path in the extra bitmap to save it.
-                                if (controller.isEraseMode.value) {
-                                    canvas?.drawCircle(
-                                        center = Offset(motionTouchEventX, motionTouchEventY),
-                                        radius = controller.eraseRadius,
-                                        paint = controller.currentPaint
-                                    )
-                                } else {
-                                    canvas?.drawPath(path, controller.currentPaint)
-                                }
+                            // Draw the path in the extra bitmap to save it.
+                            if (controller.isEraseMode.value) {
+                                canvas?.drawCircle(
+                                    center = Offset(motionTouchEventX, motionTouchEventY),
+                                    radius = controller.eraseRadius,
+                                    paint = controller.currentPaint
+                                )
+                            } else {
+                                canvas?.drawPath(path, controller.currentPaint)
                             }
                         }
-                        MotionEvent.ACTION_CANCEL, MotionEvent.ACTION_UP -> {
-                            controller.clearRedoPath()
-                            controller.addDrawPath(path)
-                            controller.updateRevised()
-                            path = Path()
-                        }
-                        else -> false
                     }
-                    onEventListener?.invoke(event.x, event.y)
-                    invalidatorTick.value++
-                    true
-                }
-        ) {
-            drawIntoCanvas { canvas ->
-                // draw image bitmap on the canvas.
-                controller.imageBitmap?.let { imageBitmap ->
-                    var dx = 0f
-                    var dy = 0f
-                    val scale: Float
-                    val shaderMatrix = Matrix()
-                    val shader = ImageShader(imageBitmap, TileMode.Clamp)
-                    val brush = ShaderBrush(shader)
-                    val paint = paintPool.acquire() ?: Paint()
-                    paint.asFrameworkPaint().apply {
-                        isAntiAlias = true
-                        isDither = true
-                        isFilterBitmap = true
+                    MotionEvent.ACTION_CANCEL, MotionEvent.ACTION_UP -> {
+                        controller.clearRedoPath()
+                        controller.addDrawPath(path)
+                        controller.updateRevised()
+                        path = Path()
                     }
-
-                    // cache the paint in the internal stack.
-                    canvas.saveLayer(size.toRect(), paint)
-
-                    val mDrawableRect = RectF(0f, 0f, size.width, size.height)
-                    val bitmapWidth: Int = imageBitmap.asAndroidBitmap().width
-                    val bitmapHeight: Int = imageBitmap.asAndroidBitmap().height
-
-                    if (bitmapWidth * mDrawableRect.height() > mDrawableRect.width() * bitmapHeight) {
-                        scale = mDrawableRect.height() / bitmapHeight.toFloat()
-                        dx = (mDrawableRect.width() - bitmapWidth * scale) * 0.5f
-                    } else {
-                        scale = mDrawableRect.width() / bitmapWidth.toFloat()
-                        dy = (mDrawableRect.height() - bitmapHeight * scale) * 0.5f
-                    }
-
-                    // resize the matrix to scale by sx and sy.
-                    shaderMatrix.setScale(scale, scale)
-
-                    // post translate the matrix with the specified translation.
-                    shaderMatrix.postTranslate(
-                        (dx + 0.5f) + mDrawableRect.left,
-                        (dy + 0.5f) + mDrawableRect.top
-                    )
-                    // apply the scaled matrix to the shader.
-                    shader.setLocalMatrix(shaderMatrix)
-                    // Set the shader matrix to the controller.
-                    controller.imageBitmapMatrix.value = shaderMatrix
-                    // draw an image bitmap as a rect.
-                    drawRect(brush = brush, size = controller.bitmapSize.value.toSize())
-                    // restore canvas
-                    canvas.restore()
-                    // resets the paint and release to the pool.
-                    paint.asFrameworkPaint().reset()
-                    paintPool.release(paint)
+                    else -> false
                 }
-
-                // draw path bitmap on the canvas.
-                controller.pathBitmap?.let { bitmap ->
-                    canvas.drawImage(bitmap, Offset.Zero, Paint())
-                }
+                onEventListener?.invoke(event.x, event.y)
+                invalidatorTick.value++
+                true
             }
-            if (invalidatorTick.value != 0) {
-                onRevisedListener?.invoke(controller.canUndo.value, controller.canRedo.value)
+    ) {
+        drawIntoCanvas { canvas ->
+            // draw image bitmap on the canvas.
+            controller.imageBitmap?.let { imageBitmap ->
+                var dx = 0f
+                var dy = 0f
+                val scale: Float
+                val shaderMatrix = Matrix()
+                val shader = ImageShader(imageBitmap, TileMode.Clamp)
+                val brush = ShaderBrush(shader)
+                val paint = paintPool.acquire() ?: Paint()
+                paint.asFrameworkPaint().apply {
+                    isAntiAlias = true
+                    isDither = true
+                    isFilterBitmap = true
+                }
+
+                // cache the paint in the internal stack.
+                canvas.saveLayer(size.toRect(), paint)
+
+                val mDrawableRect = RectF(0f, 0f, size.width, size.height)
+                val bitmapWidth: Int = imageBitmap.asAndroidBitmap().width
+                val bitmapHeight: Int = imageBitmap.asAndroidBitmap().height
+
+                if (bitmapWidth * mDrawableRect.height() > mDrawableRect.width() * bitmapHeight) {
+                    scale = mDrawableRect.height() / bitmapHeight.toFloat()
+                    dx = (mDrawableRect.width() - bitmapWidth * scale) * 0.5f
+                } else {
+                    scale = mDrawableRect.width() / bitmapWidth.toFloat()
+                    dy = (mDrawableRect.height() - bitmapHeight * scale) * 0.5f
+                }
+
+                // resize the matrix to scale by sx and sy.
+                shaderMatrix.setScale(scale, scale)
+
+                // post translate the matrix with the specified translation.
+                shaderMatrix.postTranslate(
+                    (dx + 0.5f) + mDrawableRect.left,
+                    (dy + 0.5f) + mDrawableRect.top
+                )
+                // apply the scaled matrix to the shader.
+                shader.setLocalMatrix(shaderMatrix)
+                // Set the shader matrix to the controller.
+                controller.imageBitmapMatrix.value = shaderMatrix
+                // draw an image bitmap as a rect.
+                drawRect(brush = brush, size = controller.bitmapSize.value.toSize())
+                // restore canvas
+                canvas.restore()
+                // resets the paint and release to the pool.
+                paint.asFrameworkPaint().reset()
+                paintPool.release(paint)
             }
+
+            // draw path bitmap on the canvas.
+            controller.pathBitmap?.let { bitmap ->
+                canvas.drawImage(bitmap, Offset.Zero, Paint())
+            }
+        }
+        if (invalidatorTick.value != 0) {
+            onRevisedListener?.invoke(controller.canUndo.value, controller.canRedo.value)
         }
     }
 }
