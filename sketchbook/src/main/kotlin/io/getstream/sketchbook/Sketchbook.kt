@@ -76,7 +76,7 @@ public fun Sketchbook(
     backgroundColor: Color = Color.Transparent,
     imageBitmap: ImageBitmap? = null,
     onPathListener: ((path: Path) -> Unit)? = null,
-    onEventListener: ((x: Float, y: Float) -> Unit)? = null,
+    onEventListener: ((x: Float, y: Float, motionEvent: Int) -> Unit)? = null,
     onRevisedListener: ((canUndo: Boolean, canRedo: Boolean) -> Unit)? = null
 ) {
     var path = Path()
@@ -164,12 +164,12 @@ public fun Sketchbook(
                         controller.clearRedoPath()
                         controller.addDrawPath(path)
                         controller.updateRevised()
+                        onPathListener?.invoke(path)
                         path = Path()
                     }
                     else -> false
                 }
-                onEventListener?.invoke(event.x, event.y)
-                onPathListener?.invoke(path)
+                onEventListener?.invoke(event.x, event.y, event.action)
                 invalidatorTick.value++
                 true
             }
