@@ -196,8 +196,14 @@ public class SketchbookController {
         drawPaint.value.pathEffect = pathEffect
     }
 
-    internal fun addDrawPath(path: Path) {
+    /** Draws a [Path] with the current [Paint]. */
+    public fun addDrawPath(path: Path) {
         drawPaths.add(SketchPath(path, Paint().copy(currentPaint)))
+    }
+
+    /** Draws a [Path] with the current [Paint]. */
+    public fun addDrawPath(path: Path, paint: Paint) {
+        drawPaths.add(SketchPath(path, Paint().copy(paint)))
     }
 
     internal fun clearRedoPath() {
