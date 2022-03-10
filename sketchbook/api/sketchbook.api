@@ -34,6 +34,8 @@ public final class io/getstream/sketchbook/PaintColorPaletteTheme {
 public final class io/getstream/sketchbook/SketchbookController {
 	public static final field $stable I
 	public fun <init> ()V
+	public final fun addDrawPath (Landroidx/compose/ui/graphics/Path;)V
+	public final fun addDrawPath (Landroidx/compose/ui/graphics/Path;Landroidx/compose/ui/graphics/Paint;)V
 	public final fun clear ()V
 	public final fun clearImageBitmap ()V
 	public final fun clearPaths ()V
