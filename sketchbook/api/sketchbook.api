@@ -67,6 +67,6 @@ public final class io/getstream/sketchbook/SketchbookControllerKt {
 }
 
 public final class io/getstream/sketchbook/SketchbookKt {
-	public static final fun Sketchbook-FU0evQE (Landroidx/compose/ui/Modifier;Lio/getstream/sketchbook/SketchbookController;JLandroidx/compose/ui/graphics/ImageBitmap;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun Sketchbook-TgFrcIs (Landroidx/compose/ui/Modifier;Lio/getstream/sketchbook/SketchbookController;JLandroidx/compose/ui/graphics/ImageBitmap;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 }
 

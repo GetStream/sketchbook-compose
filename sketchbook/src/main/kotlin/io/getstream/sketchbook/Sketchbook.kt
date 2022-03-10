@@ -65,7 +65,8 @@ import kotlin.math.abs
  * @param controller [SketchbookController] to control the [Sketchbook].
  * @param backgroundColor A background color to be used erasing colored paths.
  * @param imageBitmap An [ImageBitmap] to draw on the canvas as a background.
- * @param onEventListener An event listener to track drawing paths.
+ * @param onPathListener An event listener to track drawing paths.
+ * @param onEventListener An event listener to track drawing coordinates.
  * @param onRevisedListener A listener to track whether can execute undo or redo.
  */
 @Composable
@@ -74,6 +75,7 @@ public fun Sketchbook(
     controller: SketchbookController,
     backgroundColor: Color = Color.Transparent,
     imageBitmap: ImageBitmap? = null,
+    onPathListener: ((path: Path) -> Unit)? = null,
     onEventListener: ((x: Float, y: Float) -> Unit)? = null,
     onRevisedListener: ((canUndo: Boolean, canRedo: Boolean) -> Unit)? = null
 ) {
@@ -167,6 +169,7 @@ public fun Sketchbook(
                     else -> false
                 }
                 onEventListener?.invoke(event.x, event.y)
+                onPathListener?.invoke(path)
                 invalidatorTick.value++
                 true
             }
