@@ -26,7 +26,7 @@ import android.view.MotionEvent
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -76,7 +76,7 @@ public fun Sketchbook(
     backgroundColor: Color = Color.Transparent,
     imageBitmap: ImageBitmap? = null,
     onPathListener: ((path: Path) -> Unit)? = null,
-    onEventListener: ((x: Float, y: Float, motionEvent: Int) -> Unit)? = null,
+    onEventListener: ((x: Float, y: Float) -> Unit)? = null,
     onRevisedListener: ((canUndo: Boolean, canRedo: Boolean) -> Unit)? = null
 ) {
     var path = Path()
@@ -86,7 +86,7 @@ public fun Sketchbook(
     val invalidatorTick: MutableState<Int> = remember { mutableStateOf(0) }
 
     val coroutineScope = rememberCoroutineScope()
-    LaunchedEffect(key1 = controller) {
+    DisposableEffect(key1 = controller) {
         coroutineScope.launch(Dispatchers.Main) {
             controller.setImageBitmap(imageBitmap)
             controller.setBackgroundColor(backgroundColor)
@@ -100,6 +100,11 @@ public fun Sketchbook(
                 }
                 invalidatorTick.value++
             }
+        }
+
+        onDispose {
+            controller.releaseBitmap()
+            controller.clear()
         }
     }
 
@@ -159,12 +164,12 @@ public fun Sketchbook(
                         controller.clearRedoPath()
                         controller.addDrawPath(path)
                         controller.updateRevised()
-                        onPathListener?.invoke(path)
                         path = Path()
                     }
                     else -> false
                 }
-                onEventListener?.invoke(event.x, event.y, event.action)
+                onEventListener?.invoke(event.x, event.y)
+                onPathListener?.invoke(path)
                 invalidatorTick.value++
                 true
             }
