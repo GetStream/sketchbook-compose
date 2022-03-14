@@ -26,7 +26,7 @@ import android.view.MotionEvent
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -86,7 +86,7 @@ public fun Sketchbook(
     val invalidatorTick: MutableState<Int> = remember { mutableStateOf(0) }
 
     val coroutineScope = rememberCoroutineScope()
-    DisposableEffect(key1 = controller) {
+    LaunchedEffect(key1 = controller) {
         coroutineScope.launch(Dispatchers.Main) {
             controller.setImageBitmap(imageBitmap)
             controller.setBackgroundColor(backgroundColor)
@@ -100,11 +100,6 @@ public fun Sketchbook(
                 }
                 invalidatorTick.value++
             }
-        }
-
-        onDispose {
-            controller.releaseBitmap()
-            controller.clear()
         }
     }
 
