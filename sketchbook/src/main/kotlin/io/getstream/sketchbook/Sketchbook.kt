@@ -28,6 +28,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -85,11 +86,19 @@ public fun Sketchbook(
     val touchTolerance = LocalViewConfiguration.current.touchSlop
     val invalidatorTick: MutableState<Int> = remember { mutableStateOf(0) }
 
-    val coroutineScope = rememberCoroutineScope()
     DisposableEffect(key1 = controller) {
+        controller.setImageBitmap(imageBitmap)
+        controller.setBackgroundColor(backgroundColor)
+
+        onDispose {
+            controller.releaseBitmap()
+            controller.clear()
+        }
+    }
+
+    val coroutineScope = rememberCoroutineScope()
+    SideEffect {
         coroutineScope.launch(Dispatchers.Main) {
-            controller.setImageBitmap(imageBitmap)
-            controller.setBackgroundColor(backgroundColor)
             controller.reviseTick.collect {
                 canvas?.nativeCanvas?.drawColor(0, PorterDuff.Mode.CLEAR)
                 val drawPaths = controller.drawPaths
@@ -100,11 +109,6 @@ public fun Sketchbook(
                 }
                 invalidatorTick.value++
             }
-        }
-
-        onDispose {
-            controller.releaseBitmap()
-            controller.clear()
         }
     }
 
