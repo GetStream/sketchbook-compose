@@ -35,7 +35,7 @@ Also, anyone can contribute to improving code, docs, or something following our 
 Add the dependency below to your **module**'s `build.gradle` file:
 ```gradle
 dependencies {
-    implementation "io.getstream:sketchbook:1.0.2"
+    implementation "io.getstream:sketchbook:1.0.3"
 }
 ```
 
@@ -57,7 +57,7 @@ repositories {
 Next, add the below dependency to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation "io.getstream:sketchbook:1.0.2-SNAPSHOT"
+    implementation "io.getstream:sketchbook:1.0.4-SNAPSHOT"
 }
 ```
 
