@@ -15,9 +15,9 @@
 
 ## Preview
 <p align="center">
-<img src="https://user-images.githubusercontent.com/24237865/154213747-438e4e27-57d8-4fe2-98bd-e29d89a6bb8c.gif" width="280"/>
-<img src="https://user-images.githubusercontent.com/24237865/154213763-47af36de-61b3-446e-9d6c-563bae87bfda.gif" width="280"/>
-<img src="/preview/preview1.gif" width="280"/>
+<img src="https://user-images.githubusercontent.com/24237865/154213747-438e4e27-57d8-4fe2-98bd-e29d89a6bb8c.gif" width="270"/>
+<img src="https://user-images.githubusercontent.com/24237865/154213763-47af36de-61b3-446e-9d6c-563bae87bfda.gif" width="270"/>
+<img src="/preview/preview1.gif" width="270"/>
 </p>
 
 <a href="https://getstream.io/chat/compose/tutorial/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="13%"/></a>
