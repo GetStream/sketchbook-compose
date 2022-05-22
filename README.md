@@ -110,7 +110,7 @@ sketchbookController.undo() // undo the drawn path if possible.
 sketchbookController.redo() // redo the drawn path if possible.
 ```
 
-<img src="https://user-images.githubusercontent.com/24237865/154213789-c5f6b885-e890-44d2-91b8-81e09177f678.gif" width="27%" align="right" />
+<img src="https://user-images.githubusercontent.com/24237865/154213789-c5f6b885-e890-44d2-91b8-81e09177f678.gif" width="270" align="right" />
 
 #### Erase Mode
 
@@ -140,7 +140,7 @@ You can changes the radius size of the erase circle:
 sketchbookController.setEraseRadius(50f)
 ```
 
-<img src="https://user-images.githubusercontent.com/24237865/154213763-47af36de-61b3-446e-9d6c-563bae87bfda.gif" width="27%" align="right" />
+<img src="https://user-images.githubusercontent.com/24237865/154213763-47af36de-61b3-446e-9d6c-563bae87bfda.gif" width="270" align="right" />
 
 #### Customize Paint
 
@@ -225,7 +225,7 @@ sketchbookController.clearPaths()
 
 ### PaintColorPalette
 
-<img src="/preview/preview0.png" align="right" width="33%">
+<img src="/preview/preview0.png" align="right" width="300">
 
 **PaintColorPalette** provides a color palette to let users choose desired colors from a provided color list.
 It provides default color palettes and shapes, which are fully customizable. You can simply implement this as the following example:
@@ -297,7 +297,7 @@ PaintColorPalette(
 > Note: Make sure if you use the custom content, you should implement all interactions and listeners by yourself.
 
 
-<img src="https://user-images.githubusercontent.com/24237865/154215023-14c50460-f55d-417e-b11a-a6e3961c864c.gif" align="right" width="30%" />
+<img src="https://user-images.githubusercontent.com/24237865/154215023-14c50460-f55d-417e-b11a-a6e3961c864c.gif" align="right" width="300" />
 
 ### ColorPickerDialog
 
