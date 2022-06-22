@@ -132,7 +132,7 @@ You can get the `State` of the erase mode with the following function below:
 val isEraseMode = sketchbookController.isEraseMode.value
 ```
 
-> Note: If you use the erase mode, make sure you set the `backgroundColor` on the `Sketchbook` properly.
+> **Note**: If you use the erase mode, make sure you set the `backgroundColor` on the `Sketchbook` properly.
 
 You can changes the radius size of the erase circle:
 
@@ -193,7 +193,7 @@ You can clear the image bitmap on canvas with the `clearImageBitmap` method:
 sketchbookController.clearImageBitmap()
 ```
 
-> Note: This demo project demonstrates an image picker with [ModernStorage's Photo Picker](https://google.github.io/modernstorage/photopicker/).
+> **Note**: This demo project demonstrates an image picker with [ModernStorage's Photo Picker](https://google.github.io/modernstorage/photopicker/).
 
 #### Sketchbook Bitmap
 
@@ -294,7 +294,7 @@ PaintColorPalette(
 )
 ```
 
-> Note: Make sure if you use the custom content, you should implement all interactions and listeners by yourself.
+> **Note**: Make sure if you use the custom content, you should implement all interactions and listeners by yourself.
 
 
 <img src="https://user-images.githubusercontent.com/24237865/154215023-14c50460-f55d-417e-b11a-a6e3961c864c.gif" align="right" width="300" />
