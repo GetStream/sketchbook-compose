@@ -2,12 +2,12 @@ package io.getstream.sketchbook
 
 object Versions {
     internal const val ANDROID_GRADLE_PLUGIN = "7.2.0"
-    internal const val ANDROID_GRADLE_SPOTLESS = "6.1.0"
+    internal const val ANDROID_GRADLE_SPOTLESS = "6.3.0"
     internal const val GRADLE_NEXUS_PUBLISH_PLUGIN = "1.1.0"
     internal const val KOTLIN = "1.6.21"
     internal const val KOTLIN_GRADLE_DOKKA = "1.6.21"
     internal const val KOTLIN_BINARY_VALIDATOR = "0.10.1"
-    internal const val KOTLIN_COROUTINE = "1.6.0"
+    internal const val KOTLIN_COROUTINE = "1.6.1"
 
     internal const val MATERIAL = "1.6.0"
     internal const val ANDROIDX_CORE_KTX = "1.5.0"
