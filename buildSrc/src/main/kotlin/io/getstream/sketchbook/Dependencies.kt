@@ -2,12 +2,12 @@ package io.getstream.sketchbook
 
 object Versions {
     internal const val ANDROID_GRADLE_PLUGIN = "7.2.0"
-    internal const val ANDROID_GRADLE_SPOTLESS = "6.1.0"
+    internal const val ANDROID_GRADLE_SPOTLESS = "6.3.0"
     internal const val GRADLE_NEXUS_PUBLISH_PLUGIN = "1.1.0"
     internal const val KOTLIN = "1.6.21"
     internal const val KOTLIN_GRADLE_DOKKA = "1.6.21"
     internal const val KOTLIN_BINARY_VALIDATOR = "0.10.1"
-    internal const val KOTLIN_COROUTINE = "1.6.0"
+    internal const val KOTLIN_COROUTINE = "1.6.1"
 
     internal const val MATERIAL = "1.6.0"
     internal const val ANDROIDX_CORE_KTX = "1.5.0"
@@ -17,6 +17,11 @@ object Versions {
     internal const val COMPOSE_MATERIAL3 = "1.0.0-alpha02"
     internal const val COLOR_PICKER = "1.1.3"
     internal const val PHOTO_PICKER = "1.0.0-alpha06"
+
+    internal const val ANDROIDX_TEST_VERSION = "1.4.0"
+    internal const val BASE_PROFILE_VERSION = "1.2.0-beta01"
+    internal const val MACRO_BENCHMARK_VERSION = "1.1.0-rc01"
+    internal const val ANDROIDX_UI_AUTOMATOR_VERSION = "2.2.0"
 }
 
 object Dependencies {
@@ -42,7 +47,17 @@ object Dependencies {
     const val composeFoundation = "androidx.compose.foundation:foundation:${Versions.COMPOSE}"
     const val composeTooling = "androidx.compose.ui:ui-tooling:${Versions.COMPOSE}"
     const val composeActivity = "androidx.activity:activity-compose:${Versions.COMPOSE_ACTIVITY}"
-    const val composeMaterial3 = "androidx.compose.material3:material3:${Versions.COMPOSE_MATERIAL3}"
+    const val composeMaterial3 =
+        "androidx.compose.material3:material3:${Versions.COMPOSE_MATERIAL3}"
     const val colorPicker = "com.github.skydoves:orchestra-colorpicker:${Versions.COLOR_PICKER}"
-    const val photoPicker = "com.google.modernstorage:modernstorage-photopicker:${Versions.PHOTO_PICKER}"
+    const val photoPicker =
+        "com.google.modernstorage:modernstorage-photopicker:${Versions.PHOTO_PICKER}"
+
+    const val BASE_PROFILE =
+        "androidx.profileinstaller:profileinstaller:${Versions.BASE_PROFILE_VERSION}"
+    const val MACRO_BENCHMARK =
+        "androidx.benchmark:benchmark-macro-junit4:${Versions.MACRO_BENCHMARK_VERSION}"
+    const val ANDROIDX_UI_AUTOMATOR =
+        "androidx.test.uiautomator:uiautomator:${Versions.ANDROIDX_UI_AUTOMATOR_VERSION}"
+    const val ANDROIDX_TEST_RUNNER = "androidx.test:runner:${Versions.ANDROIDX_TEST_VERSION}"
 }
