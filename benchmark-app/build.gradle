@@ -43,6 +43,13 @@ android {
     lintOptions {
         abortOnError false
     }
+    buildTypes {
+        benchmark {
+            signingConfig signingConfigs.debug
+            matchingFallbacks = ['release']
+            debuggable false
+        }
+    }
 }
 
 dependencies {

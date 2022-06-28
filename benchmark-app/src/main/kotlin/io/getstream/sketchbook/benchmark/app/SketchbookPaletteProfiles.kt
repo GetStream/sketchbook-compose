@@ -37,7 +37,7 @@ fun SketchbookPaletteIconProfiles(
             .size(60.dp)
             .padding(6.dp),
         controller = sketchbookController,
-        bitmap = ImageBitmap.imageResource(R.mipmap.ic_launcher)
+        bitmap = ImageBitmap.imageResource(R.drawable.palette)
     )
 }
 

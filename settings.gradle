@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "SketchbookDemo"
 include ':app'
 include ':sketchbook'
+include ':benchmark'
 include ':benchmark-app'

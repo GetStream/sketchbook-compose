@@ -40,7 +40,7 @@ fun SketchbookProfiles(
         sketchbookController.setPaintColor(streamAccent)
         sketchbookController.setPaintStrokeWidth(23f)
         sketchbookController.setPaintShader(null)
-        sketchbookController.setLinearShader(emptyList())
+        sketchbookController.setLinearShader(listOf(Color.White, Color.White))
         sketchbookController.setRainbowShader()
         sketchbookController.setPaintingStyle(PaintingStyle.Fill)
         sketchbookController.setPathEffect(PathEffect.cornerPathEffect(60f))
