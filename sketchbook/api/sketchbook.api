@@ -11,7 +11,6 @@ public final class io/getstream/sketchbook/PaintColorPaletteKt {
 }
 
 public final class io/getstream/sketchbook/PaintColorPaletteTheme {
-	public static final field $stable I
 	public synthetic fun <init> (Landroidx/compose/ui/graphics/Shape;FFJFILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public synthetic fun <init> (Landroidx/compose/ui/graphics/Shape;FFJFLkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Landroidx/compose/ui/graphics/Shape;
