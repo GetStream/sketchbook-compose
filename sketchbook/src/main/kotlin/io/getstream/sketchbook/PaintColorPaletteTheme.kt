@@ -17,6 +17,7 @@
 package io.getstream.sketchbook
 
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
@@ -31,6 +32,7 @@ import androidx.compose.ui.unit.dp
  * @param borderColor Border color of the palette item.
  * @param borderWidth Border width size of the palette item.
  */
+@Immutable
 public data class PaintColorPaletteTheme(
     val shape: Shape = CircleShape,
     val itemSize: Dp = 48.dp,
