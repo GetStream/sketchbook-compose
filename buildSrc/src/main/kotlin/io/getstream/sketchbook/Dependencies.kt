@@ -12,7 +12,7 @@ object Versions {
     internal const val MATERIAL = "1.6.1"
     internal const val ANDROIDX_CORE_KTX = "1.5.0"
 
-    internal const val COMPOSE = "1.3.0-rc01"
+    internal const val COMPOSE = "1.3.0"
     internal const val COMPOSE_COMPILER = "1.3.2"
     internal const val COMPOSE_ACTIVITY = "1.4.0"
     internal const val COMPOSE_MATERIAL3 = "1.0.0-alpha02"
